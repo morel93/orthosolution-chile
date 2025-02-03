@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #5F9EA0; /* Verde azulado */
+            background-color: #5F9EA0;
             color: #333;
             text-align: center;
             margin: 0;
@@ -27,13 +27,37 @@
         .section {
             margin-bottom: 20px;
             padding: 10px;
+            display: none; /* Las secciones estarán ocultas inicialmente */
+            border-top: 2px solid #2F4F4F;
+        }
+        .section.active {
+            display: block; /* Se muestra la sección si tiene la clase "active" */
         }
         .image-container img {
-            width: 80%; /* Ancho máximo del 80% */
-            max-width: 600px; /* Limita el tamaño a 600px de ancho */
-            height: auto; /* Mantiene la proporción de la imagen */
+            width: 80%;
+            max-width: 600px;
+            height: auto;
             border-radius: 10px;
             margin-top: 10px;
+        }
+        /* Estilos del menú */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        nav ul li {
+            display: block;
+            background-color: #fff;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        nav ul li:hover {
+            background-color: #2F4F4F;
+            color: white;
         }
     </style>
 </head>
@@ -41,129 +65,142 @@
 
     <div class="container">
         <h1>Bienvenido a Orthosolution Chile</h1>
-        <div class="image-container">
-            <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/titulo.png" alt="Quiénes somos">
-        </div>
-        <div class="section">
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li onclick="showSection('quienes-somos')">Quiénes somos</li>
+                <li onclick="showSection('objetivos')">Objetivos Específicos</li>
+                <li onclick="showSection('doctor')">Presentación del Doctor</li>
+                <li onclick="showSection('curso')">Diploma en Ortodoncia</li>
+            </ul>
+        </nav>
+
+        <!-- Secciones -->
+        <div id="quienes-somos" class="section">
             <h2>Quiénes somos</h2>
             <p>Orthosolution Chile
 
-                Propender al ejercicio, perfeccionamiento,
-                desarrollo y educación teórico práctica
-                continuada en Ortopedia Funcional de los
-                Maxilares y Ortodoncia. Para ello,
-                orthosolution promueve la generación de
-                espacios de estudio, elaboración de
-                proyectos, y perfeccionamiento en el área de
-                la Ortopedia Dentomaxilar y Ortodoncia.
+                Propender al ejercicio, perfeccionamiento, desarrollo y educación teórico práctica continuada en Ortopedia Funcional de los Maxilares y Ortodoncia.
+				Para ello, orthosolution promueve la generación de espacios de estudio, elaboración de proyecto y perfeccionamiento en el área de la Ortopedia Dentomaxilar y Ortodoncia.
                 
-                dcursos
-                
-                conferencias,
-                
-                simposios, eventos
-                
-                reuniones profesionales.
-                Realizar la certificación que valide los
-                conocimientos adquiridos en su
-                formación en Ortopedia Funcional de
-                los Maxilares, Ortodoncia y Ortopedia
-                Dentomaxilofacial, de sus socios, así
-                como también otras áreas
-                relacionadas con las anteriores.
-                
-                Dicha certificación deberá ser
-                realizada conforme al Reglamento de
-                Certificación de esta institución.</p>
+                dcursos, conferencias, simposios, eventos y reuniones profesionales.
+				
+                Realizar la certificación que valide los conocimientos adquiridos en su formación en Ortopedia Funcional de los Maxilares, Ortodoncia, Ortopedia y Dentomaxilofacial, así como también otras áreas relacionadas con las anteriores.
+                Dicha certificación deberá ser realizada conforme al Reglamento de Certificación de esta institución.</p>
             <div class="image-container">
-                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/quienes-somos.jpeg" alt="Quiénes somos">
+                <img src="https://raw.githubusercontent.com/morel93/orthosolution-chile/main/imagenes/quienes-somos.jpeg" alt="Quiénes somos">
             </div>
         </div>
 
-        <div class="section">
-            <h2>Objetivos Especificos</h2>
+        <div id="objetivos" class="section">
+            <h2>Objetivos Específicos</h2>
             <p>Al final del Diplomado los alumnos deben ser capaces de:
-                Diagnosticar las anomalías dentomaxilares con el fin de prevenirlas,
-                interceptarlas y tratarlas una vez instaladas.
-                Conocer por el alumno alternativas terapéuticas ortopédicas y
-                ortodóncicas disponibles para cada anomalía.
-                Interpretar los estudios de modelos, fotográficos y cefalométricos
-                para el adecuado diagnóstico de las anomalías.
-                Elaboración de plan de tratamiento para cada anomalía, en
-                tratamientos de una o dos fases según sea el caso.
-                Conocer la etiología de las malaoclusiones con el fin de interceptarlas y
-                prevenirlas.
-                Identificar la influencia del crecimiento y desarrollo en la instalación y evolución
-                de las anomalías dentomaxilares.
-                Planificar tratamientos ortopédicos y ortodónticos adecuados dependiendo de la
-                edad y desarrollo del paciente.
-                Reconocer los principios de la Ortopedia Funcional de los Maxilares, la
-                importancia del equilibrio de la Matriz Funcional desde un enfoque
-                multidisciplinario.
-                Realizar una adecuada documentación de los casos de ortopedia y ortodoncia de
-                acuerdo a un protocolo de tratamiento</p>
+                Diagnosticar las anomalías dentomaxilares con el fin de prevenirlas, interceptarlas y tratarlas una vez instaladas.
+                Conocer por el alumno alternativas terapéuticas ortopédicas y ortodóncicas disponibles para cada anomalía.
+                Interpretar los estudios de modelos, fotográficos y cefalométricos para el adecuado diagnóstico de las anomalías.
+                Elaboración de plan de tratamiento para cada anomalía, en tratamientos de una o dos fases según sea el caso.
+                Conocer la etiología de las malaoclusiones con el fin de interceptarlas y prevenirlas.
+                Identificar la influencia del crecimiento y desarrollo en la instalación y evolución de las anomalías dentomaxilares.
+                Planificar tratamientos ortopédicos y ortodónticos adecuados dependiendo de la edad y desarrollo del paciente.
+                Reconocer los principios de la Ortopedia Funcional de los Maxilares, la importancia del equilibrio de la Matriz Funcional desde un enfoque multidisciplinario.
+                Realizar una adecuada documentación de los casos de ortopedia y ortodoncia de acuerdo a un protocolo de tratamiento</p>
             <div class="image-container">
-                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/objetivos-generales.jpeg" alt="Objetivos Generales">
+                <img src="https://raw.githubusercontent.com/morel93/orthosolution-chile/main/imagenes/objetivos-generales.jpeg" alt="Objetivos Generales">
             </div>
         </div>
 
-        <div class="section">
-            <h2>Presentación del Doctor y docente</h2>
-            <p>Dr. Dr. Sergio Cousiño Mútis</p>
-            <p>Cirujano Dentista U. de Chile.
-
-                Diplomado Gestión en Odontología
-                Facultad de Ciencias Económicas y
-                Administrativas U. de Chile.
-                
-                Especialista en Ortodoncia
-                Ortodoncista certificado en la
-                Superintendencia de Salud.
-                
-                Especialista en Ortopedia Funcional
-                de los Maxilares
-                
-                Diplomado Educación Universitaria
-                en Ciencias de la Salud.
-                Presidente CEO U. de Chile (período
-                1984 / 1985)
-                
-                Miembro del Consejo de Presidentes
-                FECH (1984-1985)
-                
-                Presidente Capítulo Ejercicio Liberal,
-                Colegio de Cirujano Dentistas de Chile
-                (2010 -2011 / 2018-2020).
-                
-                Consejero Nacional Colegio Cirujano
-                Dentistas (2012 -2016)
-                
-                Miembro de la Directiva Federación
-                de Colegios Profesionales
-                Universitarios (2016 – 2018)</p>
-            <div class="image-container">
-                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/doctor.png" alt="Doctor">
-            </div>
-        </div>
-
-        <div class="section image-container">
-            <h2>DIPLOMA EN ORTODONCIA Y ORTOPEDIA FUNCIONAL</h2>
-            <p>CARACTERISTICAS DEL CURSO
-
-                Teórico Práctico modular, las clases teóricas son 100% Online, las que
-                se suben al canal de YouTube de Orthosolution Chile y actividades
-                clínica, con atención de pacientes en Ortopedia Funcional y
-                Ortodoncia supervisadas vía online por los docentes del curso.
-                
-                Cada alumno deberá realizar seminarios con presentación de casos.
-                Los alumnos deberán hacer trabajos complementarios investigando
-                distintos temas y elaborando un relatorio escrito de ellos, el cual
-                deberá ser entregado al término del curso. Los alumnos deberán
-                entregar cada uno de sus casos montados en Power Point con el
-                diagnóstico, plan de tratamiento y evolución mes a mes.</p>
-            <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/clinica.jpg" alt="Imagen de la clínica">
-        </div>
+        <div id="doctor" class="section">
+    <h2>Presentación del Doctor y Docente</h2>
+    
+    <!-- Lista con puntos indicadores -->
+    <ul>
+        <li>
+            <p><strong>Dr. Sergio Cousiño Mútis</strong></p>
+        </li>
+        <li>
+            <p><strong>Cirujano Dentista</strong> U. de Chile</p>
+        </li>
+        <li>
+            <p><strong>Diplomado Gestión en Odontología</strong> Facultad de Ciencias Económicas y Administrativas U. de Chile.</p>
+        </li>
+        <li>
+            <p><strong>Especialista en Ortodoncia</strong> Ortodoncista certificado en la Superintendencia de Salud.</p>
+        </li>
+        <li>
+            <p><strong>Especialista en Ortopedia Funcional de los Maxilares</strong></p>
+        </li>
+        <li>
+            <p><strong>Diplomado Educación Universitaria en Ciencias de la Salud</strong></p>
+        </li>
+        <li>
+            <p><strong>Presidente CEO</strong> U. de Chile (período 1984 / 1985)</p>
+        </li>
+        <li>
+            <p><strong>Miembro del Consejo de Presidentes</strong> FECH (1984-1985)</p>
+        </li>
+        <li>
+            <p><strong>Presidente Capítulo Ejercicio Liberal</strong>, Colegio de Cirujano Dentistas de Chile (2010 -2011 / 2018-2020).</p>
+        </li>
+        <li>
+            <p><strong>Consejero Nacional Colegio Cirujano Dentistas</strong> (2012 -2016)</p>
+        </li>
+        <li>
+            <p><strong>Miembro de la Directiva</strong> Federación de Colegios Profesionales Universitarios (2016 – 2018)</p>
+        </li>
+    </ul>
+    
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/morel93/orthosolution-chile/main/imagenes/doctor.png" alt="Doctor">
     </div>
+</div>
+
+        <div id="curso" class="section">
+    <h2>DIPLOMA EN ORTODONCIA Y ORTOPEDIA FUNCIONAL</h2>
+    
+    <!-- Lista con puntos indicadores -->
+    <ul>
+        <li>
+            <p><strong>Teórico Práctico modular:</strong> Las clases teóricas son 100% Online, subidas al canal de YouTube de Orthosolution Chile.</p>
+        </li>
+        <li>
+            <p><strong>Actividades clínicas:</strong> Con atención de pacientes en Ortopedia Funcional y Ortodoncia supervisadas vía online por los docentes del curso.</p>
+        </li>
+        <li>
+            <p><strong>Seminarios:</strong> Cada alumno deberá realizar seminarios con presentación de casos.</p>
+        </li>
+        <li>
+            <p><strong>Trabajos complementarios:</strong> Los alumnos deberán hacer trabajos complementarios investigando distintos temas y elaborando un relatorio escrito de ellos.</p>
+        </li>
+        <li>
+            <p><strong>Entrega de casos:</strong> Los alumnos deberán entregar cada uno de sus casos montados en Power Point con el diagnóstico, plan de tratamiento y evolución mes a mes.</p>
+        </li>
+    </ul>
+
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/morel93/orthosolution-chile/main/imagenes/clinica.jpg" alt="Imagen de la clínica">
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Función para mostrar la sección correspondiente al hacer clic en el menú
+        function showSection(sectionId) {
+            // Ocultamos todas las secciones
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Mostramos la sección correspondiente
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+
+        // Mostrar la primera sección por defecto (si lo deseas)
+        showSection('quienes-somos');
+    </script>
 
 </body>
 </html>
