@@ -69,6 +69,7 @@
     <div class="container">
         <h1>Bienvenido a Orthosolution Chile</h1>
         <div class="menu">
+            <img src=https://github.com/morel93/orthosolution-chile/blob/main/imagenes/titulo.png>
             <button onclick="showSection('quienes-somos')">Quiénes somos</button>
             <button onclick="showSection('objetivos')">Objetivos</button>
             <button onclick="showSection('doctor')">Doctor</button>
@@ -79,15 +80,15 @@
             <h2>Quiénes somos</h2>
             <p>Somos una clínica especializada en ortodoncia, comprometidos con la salud bucal de nuestros pacientes.</p>
             <div class="image-container">
-                <img src="imagenes/quienes-somos.jpeg" alt="Quiénes somos">
+                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/quienes-somos.jpeg" alt="Quiénes somos">
             </div>
         </div>
 
         <div id="objetivos" class="section">
-            <h2>Objetivos Generales</h2>
+            <h2>Objetivos Especificos</h2>
             <p>Nuestro objetivo es proporcionar tratamientos ortodóncicos de alta calidad utilizando tecnología avanzada.</p>
             <div class="image-container">
-                <img src="imagenes/objetivos-generales.jpeg" alt="Objetivos Generales">
+                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/objetivos-generales.jpeg" alt="Objetivos Generales">
             </div>
         </div>
 
@@ -95,14 +96,14 @@
             <h2>Presentación del Doctor</h2>
             <p>El Dr. Juan Pérez es un especialista en ortodoncia con más de 10 años de experiencia en el campo.</p>
             <div class="image-container">
-                <img src="imagenes/doctor.png" alt="Doctor">
+                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/doctor.png" alt="Doctor">
             </div>
         </div>
 
         <div id="clinica" class="section">
             <h2>Nuestra Clínica</h2>
             <div class="image-container">
-                <img src="imagenes/clinica.jpg" alt="Imagen de la clínica">
+                <img src="https://github.com/morel93/orthosolution-chile/blob/main/imagenes/clinica.jpg" alt="Imagen de la clínica">
             </div>
         </div>
     </div>
