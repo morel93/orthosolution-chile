@@ -6,6 +6,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -14,7 +15,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    border: 20 px solid #5f9ea0; /* Bordes en color original */
+    border: 20px solid #5f9ea0; /* Bordes en color original sin espacio extra */
 }
 
 /* Contenedor con fondo blanco centrado */
@@ -43,25 +44,23 @@ h1, h2 {
     font-size: 18px; /* Letra más grande */
 }
 
-/* Imágenes */
+/* Imágenes dentro del contenido */
 .image-container img {
     width: 80%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px; /* Ajusta el margen */
 }
 
 /* Imagen en la esquina */
 .imagen-esquina {
     position: fixed; 
-    display: block;
-    margin: 0 auto 20px auto; /* Centrar la imagen y dar margen */
-    top: 10px; 
-    right: 10px;
-    width: 200px; /* Ajusta el tamaño */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde la parte derecha */
+    width: 150px; /* Ajusta el tamaño de la imagen */
     height: auto;
-    z-index: 100; /* Asegura que no esté sobre el texto */
+    z-index: 1; /* Asegura que no esté sobre el texto */
 }
 
 /* Línea azul al final de la página */
@@ -74,13 +73,13 @@ h1, h2 {
 
 /* Pie de página */
 footer {
-    position: relative; /* Asegura que el contenido lo empuje */
+    position: relative;
     width: 100%;
     background-color: #2F4F4F;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px; /* Espacio antes del footer */
+    margin-top: 50px;
     bottom: 0;
 }
 
