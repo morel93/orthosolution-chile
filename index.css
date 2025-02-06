@@ -1,3 +1,22 @@
+/* Estilos del menú */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+nav ul li {
+    display: block;
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+nav ul li:hover {
+    background-color: #2F4F4F;
+    color: white;
+}
 html, body {
     height: 100%;
     margin: 0;
@@ -5,18 +24,6 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: white; /* Fondo de la página blanco */
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    border: 20px solid #5f9ea0; /* Bordes en color original sin espacio extra */
-}
-
 /* Contenedor con fondo blanco centrado */
 .container {
     flex: 1;
@@ -28,13 +35,6 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 80px; /* Asegura que la imagen no lo tape */
 }
-
-/* Títulos */
-h1, h2 {
-    color: #2F4F4F;
-    font-size: 24px; /* Letra más grande */
-}
-
 /* Secciones */
 .section {
     margin-bottom: 20px;
@@ -48,7 +48,21 @@ h1, h2 {
 .section.active {
     display: block;
 }
-
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Fondo de la página blanco */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 20px solid #5f9ea0; /* Bordes en color original sin espacio extra */
+}
+/* Títulos */
+h1, h2 {
+    color: #2F4F4F;
+    font-size: 24px; /* Letra más grande */
+}
 /* Imágenes dentro del contenido */
 .image-container img {
     width: 80%;
@@ -97,23 +111,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-/* Estilos del menú */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-nav ul li {
-    display: block;
-    background-color: #fff;
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-nav ul li:hover {
-    background-color: #2F4F4F;
-    color: white;
 }
