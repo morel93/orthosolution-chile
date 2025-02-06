@@ -1,3 +1,11 @@
+/* Ajuste general para que el contenido no empuje el footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -10,6 +18,7 @@ body {
 
 /* Contenedor con fondo blanco centrado */
 .container {
+    flex: 1;
     width: 80%;
     margin: 20px auto;
     background-color: white;
@@ -44,12 +53,14 @@ h1, h2 {
 
 /* Imagen en la esquina */
 .imagen-esquina {
-    position: absolute;
-    top: 10px;
+    position: fixed; 
+    display: block;
+    margin: 0 auto 20px auto; /* Centrar la imagen y dar margen */
+    top: 10px; 
     right: 10px;
-    width: 100px;
+    width: 200px; /* Ajusta el tamaño */
     height: auto;
-    z-index: 10;
+    z-index: 100; /* Asegura que no esté sobre el texto */
 }
 
 /* Línea azul al final de la página */
@@ -69,6 +80,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 50px; /* Espacio antes del footer */
+    bottom: 0;
 }
 
 /* Enlaces dentro del footer */
