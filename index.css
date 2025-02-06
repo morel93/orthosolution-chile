@@ -41,6 +41,12 @@ h1, h2 {
     padding: 20px;
     border-top: 2px solid #2F4F4F;
     font-size: 18px; /* Letra más grande */
+    display: none; /* Las secciones estarán ocultas inicialmente */
+}
+
+/* Cuando una sección tiene la clase 'active', se muestra */
+.section.active {
+    display: block;
 }
 
 /* Imágenes dentro del contenido */
@@ -91,4 +97,23 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+/* Estilos del menú */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+nav ul li {
+    display: block;
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+nav ul li:hover {
+    background-color: #2F4F4F;
+    color: white;
 }
