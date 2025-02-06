@@ -9,11 +9,12 @@ html, body {
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #5F9EA0;
+    background-color: white; /* Fondo de la página blanco */
     color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
+    border: 20 px solid #5f9ea0; /* Bordes en color original */
 }
 
 /* Contenedor con fondo blanco centrado */
