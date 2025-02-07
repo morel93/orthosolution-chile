@@ -28,7 +28,7 @@ html, body {
 .container {
     flex: 1;
     width: 80%;
-    margin: 20px auto;
+    margin: 12px auto 20px auto;/* Margen superior mayor para no ser tapado */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -55,8 +55,10 @@ body {
     color: #333;
     text-align: center;
     margin: 0;
-    padding: 0;
-    border: 20px solid #5f9ea0; /* Bordes en color original sin espacio extra */
+    padding: 20px; /* Espaciado interno */
+    outline: 20px solid #5f9ea0; /* Borde sin afectar el contenido */
+    min-height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
+    box-sizing: border-box; /* El borde no afecta el tamaño total */
 }
 /* Títulos */
 h1, h2 {
@@ -71,10 +73,21 @@ h1, h2 {
     border-radius: 10px;
     margin-top: 20px; /* Ajusta el margen */
 }
-
+/* Encabezado fijo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fondo del header */
+    z-index: 1000; /* Para que no quede detrás de otros elementos */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
 /* Imagen en la esquina */
 .imagen-esquina {
-    position: fixed; 
+    position: absolute; 
     top: 10px; /* Ajusta la distancia desde la parte superior */
     right: 10px; /* Ajusta la distancia desde la parte derecha */
     width: 150px; /* Ajusta el tamaño de la imagen */
