@@ -32,12 +32,21 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 0 0 20px #5f9ea0; /* Bordes de 20px en color verde azulado */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Predeterminado: imagen arriba, texto abajo */
+    align-items: center; /* Centra horizontalmente */
+}
+/* Para pantallas grandes (web) */
+@media (min-width: 768px) {
+    .contenedor {
+        flex-direction: column-reverse; /* Cambia el orden en pantallas grandes */
+    }
 }
 /* Secciones */
 .section {
     margin-bottom: 20px;
     padding: 20px;
-    border-top: 2px solid #2F4F4F;
+
     font-size: 18px; /* Letra más grande */
     display: none; /* Las secciones estarán ocultas inicialmente */
 }
